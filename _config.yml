@@ -1,17 +1,17 @@
 # site settings
 title: Transit Project
 subtitle:
-email: youremailaddress@gmail.com
-description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
+email: jacquemain.ainsley@gmail.com
+description: Exploring exoplanet biosignatures with the quantitative analysis of transit data.
 baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
-author:
-street_address: 1234 Somewhere Road
-city: Nashville
-state: TN
-zip_code: 55555
+url: https://jacquemainainsley.github.io # the base hostname & protocol for your site
+author: Ainsley Jacquemain
+street_address: McPherson Laboratory, 140 W 18th Ave
+city: Columbus
+state: OH
+zip_code: 43210
 country: United States of America
-phone: (716) 555-5555
+phone: (614) 292-1773
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
@@ -22,21 +22,14 @@ tiles-count: 6
 # Icons are not shown if value is empty
 # You need to restart jekyll for changes to have an effect
 socials:
-  GitHub: https://github.com/andrewbanchich
-  GitLab:
-  Google-Plus: https://plus.google.com/u/0/+AndrewBanchich
-  Instagram:
-  LinkedIn: https://www.linkedin.com/in/andrew-banchich-a4ba1195
-  Twitter: https://twitter.com/andrewbanchich
-  Facebook:
-  Slack:
+  GitHub: https://github.com/jacquemainainsley
 
 # build settings
 markdown: kramdown
 
 sass:
   style: compressed
-
+  
 exclude:
 - "*.gemspec"
 - LICENSE.md
