@@ -3,7 +3,7 @@ title: Transit Project
 subtitle:
 email: jacquemain.ainsley@gmail.com
 description: Exploring exoplanet biosignatures with the quantitative analysis of transit data.
-baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
+baseurl: "/TransitProject" # the subpath of your site, e.g. /blog
 url: https://jacquemainainsley.github.io # the base hostname & protocol for your site
 author: Ainsley Jacquemain
 street_address: McPherson Laboratory, 140 W 18th Ave
@@ -23,6 +23,11 @@ tiles-count: 6
 # You need to restart jekyll for changes to have an effect
 socials:
   GitHub: https://github.com/jacquemainainsley
+  
+markdown: kramdown
+
+sass:
+  style: compressed
   
 remote_theme: "andrewbanchich/forty-jekyll-theme"
 plugins:
