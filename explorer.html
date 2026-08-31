@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exoplanet Photon Explorer</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+let data = [];
+
+// Load CSV
+fetch('photoncountdata.csv')
+.then(response => response.text())
+.then(text => {
+
+let rows = text.trim().split('\n').slice(1);
+
+rows.forEach(row => {
+
+let [planet, gas, m1, m2] = row.split(',');
+
+data.push({
+planet,
+gas,
+m1,
+m2
+});
+
+});
+
+populateDropdown();
+
+});
+
+function populateDropdown(){
+
+let planets =
+[...new Set(data.map(d => d.planet))];
+
+let dropdown =
+document.getElementById("planet");
+
+planets.forEach(p=>{
+
+let option =
+document.createElement("option");
+
+option.value = p;
+option.text = p;
+
+dropdown.add(option);
+
+});
+
+// show first planet automatically
+dropdown.selectedIndex=0;
+updateResults();
+
+dropdown.addEventListener(
+"change",
+updateResults
+);
+
+}
+
+
+function updateResults(){
+
+let selected =
+document.getElementById("planet").value;
+
+let filtered =
+data.filter(
+d=>d.planet===selected
+);
+
+let html =
+"<table border='1'><tr><th>Gas</th><th>Method 1</th><th>Method 2</th></tr>";
+
+filtered.forEach(d=>{
+
+html +=
+`<tr>
+<td>${d.gas}</td>
+<td>${d.m1}</td>
+<td>${d.m2}</td>
+</tr>`;
+
+});
+
+html += "</table>";
+
+document.getElementById("results").innerHTML=html;
+
+if (comparisonChart){
+highlightSelectedPlanet();
+}
+
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Exoplanet Photon Explorer</h1>
+
+<label for="planet">
+Choose a planet:
+</label>
+
+<select id="planet"></select>
+
+<h2>Results</h2>
+
+<div id="results"></div>
+
+<h2>Method Comparison</h2>
+<canvas id="comparisonChart"></canvas>
+
+<script>
+
+let comparisonChart;
+let allPlotData=[];
+
+fetch('photoncountdata.csv')
+.then(response => response.text())
+.then(text => {
+
+let rows=
+text.trim().split('\n').slice(1);
+
+rows.forEach(row=>{
+
+let cols=row.split(',');
+
+allPlotData.push({
+planet: cols[0],
+gas: cols[1],
+x: parseFloat(cols[2]),
+y: parseFloat(cols[3])
+});
+
+});
+
+makePlot();
+
+});
+
+
+function makePlot(){
+
+let minVal=Math.min(
+...allPlotData.map(p=>Math.min(p.x,p.y))
+);
+
+let maxVal=Math.max(
+...allPlotData.map(p=>Math.max(p.x,p.y))
+);
+
+comparisonChart=
+new Chart(
+document.getElementById("comparisonChart").getContext("2d"),
+{
+type:"scatter",
+
+data:{
+datasets:[
+
+{
+label:"All Planets",
+data:allPlotData,
+backgroundColor:"rgba(150,150,150,.3)",
+pointRadius:4
+},
+          
+{
+label:"H2O",
+data:[],
+backgroundColor:"blue",
+pointRadius:8,
+borderColor:"black",
+borderWidth:1
+},
+
+{
+label:"CO2",
+data:[],
+backgroundColor:"red",
+pointRadius:8,
+borderColor:"black",
+borderWidth:1
+},
+
+{
+label:"CH4",
+data:[],
+backgroundColor:"green",
+pointRadius:8,
+borderColor:"black",
+borderWidth:1
+          },
+
+{
+label:"O2",
+data:[],
+backgroundColor:"purple",
+pointRadius:8,
+borderColor:"black",
+borderWidth:1
+},
+          
+{
+label:"y=x",
+type:"line",
+data:[
+{x:minVal,y:minVal},
+{x:maxVal,y:maxVal}
+],
+borderColor:"black",
+pointRadius:0
+}
+
+]
+},
+
+options:{
+scales:{
+x:{
+type:"logarithmic"
+},
+y:{
+type:"logarithmic"
+}
+}
+}
+
+});
+
+highlightSelectedPlanet();
+
+}
+
+function highlightSelectedPlanet(){
+
+let selected=
+document.getElementById("planet").value;
+
+if(!selected) return;
+
+let h2o =
+allPlotData.filter(
+d=>d.planet===selected && d.gas==="H2O"
+);
+
+let co2 =
+allPlotData.filter(
+d=>d.planet===selected && d.gas==="CO2"
+);
+
+let ch4 =
+allPlotData.filter(
+d=>d.planet===selected && d.gas==="CH4"
+);
+
+let o2 =
+allPlotData.filter(
+d=>d.planet===selected && d.gas==="O2"
+);
+
+// dataset 0 = gray background
+comparisonChart.data.datasets[1].data = h2o;
+comparisonChart.data.datasets[2].data = co2;
+comparisonChart.data.datasets[3].data = ch4;
+comparisonChart.data.datasets[4].data = o2;
+
+comparisonChart.update();
+
+}
+</script>
+
+</body>
+</html>

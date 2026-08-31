@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Method Comparison (Parity Plot)</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        canvas {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Photon Count Method Comparison</h1>
+
+    <p>
+        Each point represents a photon count computed using two independent methods
+        across different exoplanets and atmospheric gases.
+        Agreement along the diagonal (y = x) indicates consistency between methods.
+    </p>
+
+    <canvas id="parityChart"></canvas>
+
+</div>
+
+<script>
+async function loadData() {
+
+    const response = await fetch("photoncountdata.csv");
+    const text = await response.text();
+
+    const rows = text.trim().split("\n").slice(1);
+
+    const gases = {}; // store grouped data
+
+    rows.forEach(row => {
+        const cols = row.split(",");
+
+        const planet = cols[0];
+        const gas = cols[1];
+        const method1 = parseFloat(cols[2]);
+        const method2 = parseFloat(cols[3]);
+
+        if (!isNaN(method1) && !isNaN(method2)) {
+
+            if (!gases[gas]) {
+                gases[gas] = [];
+            }
+
+            gases[gas].push({
+                x: method1,
+                y: method2,
+                planet: planet,
+                gas: gas
+            });
+        }
+    });
+
+    return gases;
+}
+
+async function makePlot() {
+
+    const gasData = await loadData();
+
+    // Flatten all points to get min/max
+    const allPoints = Object.values(gasData).flat();
+
+    const minVal = Math.min(...allPoints.map(d => Math.min(d.x, d.y)));
+    const maxVal = Math.max(...allPoints.map(d => Math.max(d.x, d.y)));
+
+    const colors = {
+        "H2O": "blue",
+        "CO2": "red",
+        "CH4": "green",
+        "O2": "purple"
+    };
+
+    const datasets = [];
+
+    for (const gas in gasData) {
+        datasets.push({
+            label: gas,
+            data: gasData[gas],
+            backgroundColor: colors[gas] || "gray",
+            pointRadius: 5
+        });
+    }
+
+    // Add y = x line
+    datasets.push({
+        label: "y = x",
+        type: "line",
+        data: [
+            { x: minVal, y: minVal },
+            { x: maxVal, y: maxVal }
+        ],
+        borderColor: "black",
+        borderWidth: 2,
+        pointRadius: 0,
+        fill: false
+    });
+
+    const ctx = document.getElementById("parityChart").getContext("2d");
+
+    new Chart(ctx, {
+        type: "scatter",
+        data: { datasets: datasets },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    type: 'logarithmic',
+                    title: {
+                        display: true,
+                        text: "Method 1 Photon Counts"
+                    }
+                },
+                y: {
+                    type: 'logarithmic',
+                    title: {
+                        display: true,
+                        text: "Method 2 Photon Counts"
+                    }
+                }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const p = context.raw;
+                            return `${p.planet} | ${p.gas}: (${p.x}, ${p.y})`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+makePlot();
+</script>
+
+</body>
+</html>
