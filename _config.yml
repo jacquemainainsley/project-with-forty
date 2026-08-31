@@ -3,7 +3,7 @@ title: Transit Project
 subtitle:
 email: jacquemain.ainsley@gmail.com
 description: Exploring exoplanet biosignatures with the quantitative analysis of transit data.
-baseurl: "/TransitProject" # the subpath of your site, e.g. /blog
+baseurl: "/project-with-forty" # the subpath of your site, e.g. /blog
 url: https://jacquemainainsley.github.io # the base hostname & protocol for your site
 author: Ainsley Jacquemain
 street_address: McPherson Laboratory, 140 W 18th Ave
