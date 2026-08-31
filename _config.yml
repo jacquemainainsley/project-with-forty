@@ -30,6 +30,11 @@ markdown: kramdown
 sass:
   style: compressed
   
+remote_theme: "andrewbanchich/forty-jekyll-theme"
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  
 exclude:
 - "*.gemspec"
 - LICENSE.md
