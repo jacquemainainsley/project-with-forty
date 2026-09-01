@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Elements
+title: The Project
+description: Questions, Inspirations, and Goals
 image: assets/images/pic01.jpg
 nav-menu: true
 ---

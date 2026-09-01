@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Generic
-description: Lorem ipsum dolor est
+title: The Bigger Picture
+description: Looking Outward in Exoplanet Habitability
 image: assets/images/pic11.jpg
 nav-menu: true
 ---

@@ -1,7 +1,7 @@
 ---
-title: Landing
+title: The Data
 layout: landing
-description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tempus adipiscing nulla.'
+description: 'An exoploratory, astrobiological analysis<br />of collected exoplanet data and its theoretical applications.'
 image: assets/images/pic07.jpg
 nav-menu: true
 ---
