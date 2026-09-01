@@ -1,7 +1,7 @@
 ---
 title: The Data
 layout: landing
-description: 'An exoploratory astrobiological analysis of collected<br /> exoplanet data and its theoretical applications.'
+description: 'An exoploratory astrobiological analysis of collected<br /> exoplanet data and their theoretical applications.'
 image: assets/images/pic07.jpg
 nav-menu: true
 ---
@@ -75,9 +75,9 @@ nav-menu: true
 <section id="three">
 	<div class="inner">
 		<header class="major">
-			<h2>About Me</h2>
+			<h2>Massa libero</h2>
 		</header>
-		<p>I am a third-year Physics student at the Ohio State University with an interest in astrophysics and the chemical, physical foundations of life. I care about making scientific education interactive and easily accessible. Welcome to my first-ever exploratory webpage!</p>
+		<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
 		<ul class="actions">
 			<li><a href="generic.html" class="button next">Get Started</a></li>
 		</ul>
