@@ -13,7 +13,7 @@ nav-menu: true
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h2>Where Is The Data From?</h2>
+			<h2>Where Are The Data From?</h2>
 		</header>
 		<p>Photometry data, planetary spectral energy distributions with biosignature gas wavelength ranges, were queried from the <a href="https://simbad.cds.unistra.fr/simbad/">SIMBAD Photometry Viewer</a>. These data, when imported into a universal Python program, were applied to the transformed blackbody radiation equation and converted to photon counts. General exoplanetary parameters; such as stellar radius, distance from detector, and stellar effective temperature; were queried from the <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">NASA Exoplanet Archive</a>. These data could be applied, rather directly, to the blackbody radiation equation and converted to photon counts.</p>
 	</div>
@@ -28,9 +28,9 @@ nav-menu: true
 		<div class="content">
 			<div class="inner">
 				<header class="major">
-					<h3>Orci maecenas</h3>
+					<h3>Photometry Data Versus Planetary Systems Data</h3>
 				</header>
-				<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
+				<p>A parity plot, color-coded by biosignature gas, provides a clear comparison of both methods of obtaining theoretical photon counts. Similar results instill confidence in my manner of calculation! </p>
 				<ul class="actions">
 					<li><a href="comparison.html" class="button">See the Comparison</a></li>
 				</ul>
