@@ -3,6 +3,7 @@ title: The Data
 layout: landing
 description: 'An exoploratory astrobiological analysis of collected<br /> exoplanet data and their theoretical applications.'
 image: null
+weight: 2
 nav-menu: true
 ---
 
