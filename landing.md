@@ -44,9 +44,9 @@ nav-menu: true
 		<div class="content">
 			<div class="inner">
 				<header class="major">
-					<h3>Rhoncus magna</h3>
+					<h3>Every Data Point Matters</h3>
 				</header>
-				<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
+				<p>Investigate the photon counts for the biosignature gases of a certain candidate planet.</p>
 				<ul class="actions">
 					<li><a href="explorer.html" class="button">Try the Explorer</a></li>
 				</ul>
