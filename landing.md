@@ -67,8 +67,8 @@ nav-menu: true
 				</header>
 				<p>The origin of calculated values should not be nebulous (pun intented). Check out the original universal codes responsible for the derived photon counts.</p>
 				<ul class="actions">
-					<li><a href="Copy_of_Photon_Count_New_(Blackbody_Radiation)-2.ipynb" class="button">Systems Notebook</a></li>
-                    <li><a href="Copy_of_Photon_Count_New_(Photometry_Data)-2.ipynb" class="button">Photometry Notebook</a></li>               
+					<li><a href="Copy_of_Photon_Count_New_(Blackbody_Radiation).ipynb" class="button">Systems Notebook</a></li>
+                    <li><a href="Copy_of_Photon_Count_New_(Photometry_Data).ipynb" class="button">Photometry Notebook</a></li>               
 				</ul>
 			</div>
 		</div>
