@@ -2,7 +2,7 @@
 layout: post
 title: The Bigger Picture
 description: Looking Outward in Exoplanet Habitability
-image: assets/images/pic11.jpg
+image: null
 nav-menu: true
 ---
 

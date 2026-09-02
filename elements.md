@@ -2,7 +2,7 @@
 layout: page
 title: The Project
 description: Questions, Inspirations, and Goals
-image: assets/images/pic01.jpg
+image: null
 nav-menu: true
 ---
 
