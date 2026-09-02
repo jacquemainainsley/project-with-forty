@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: Whispering Planets
+landing-title: Promising Planets: An Astronomy Project
 description: null
 image: null
 author: null
