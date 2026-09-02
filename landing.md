@@ -13,9 +13,9 @@ nav-menu: true
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h2>Sed amet aliquam</h2>
+			<h2>Where Is The Data From?</h2>
 		</header>
-		<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+		<p>Photometry data, planetary spectral energy distributions with biosignature gas wavelength ranges, were queried from the <a href="https://simbad.cds.unistra.fr/simbad/">SIMBAD Photometry Viewer</a>. These data, when imported into a universal Python program, were applied to the transformed blackbody radiation equation and converted to photon counts. General exoplanetary parameters; such as stellar radius, distance from detector, and stellar effective temperature; were queried from the <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">NASA Exoplanet Archive</a>. These data could be applied, rather directly, to the blackbody radiation equation and converted to photon counts.</p>
 	</div>
 </section>
 
