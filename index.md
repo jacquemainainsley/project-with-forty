@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: Promising Planets: An Astronomy Project
+landing-title: Promising Planets
 description: null
 image: null
 author: null
