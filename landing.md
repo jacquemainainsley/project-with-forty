@@ -15,7 +15,9 @@ nav-menu: true
 		<header class="major">
 			<h2>Where Are The Data From?</h2>
 		</header>
-		<p>General exoplanetary parameters; such as stellar radius, distance from detector, and stellar effective temperature; were queried from the <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">NASA Exoplanet Archive</a>. These data could be applied, rather directly, to the blackbody radiation equation and converted to photon counts. Photometry data, planetary spectral energy distributions with biosignature gas wavelength ranges, were queried from the <a href="https://simbad.cds.unistra.fr/simbad/">SIMBAD Photometry Viewer</a>. These data, when imported into a universal Python program, were applied to the transformed blackbody radiation equation and converted to photon counts.</p>
+		<p>General exoplanetary parameters; such as stellar radius, distance from detector, and stellar effective temperature; were queried from the <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">NASA Exoplanet Archive</a>. These data could be applied, rather directly, to the blackbody radiation equation and converted to photon counts. 
+  
+        Photometry data, planetary spectral energy distributions with biosignature gas wavelength ranges, were queried from the <a href="https://simbad.cds.unistra.fr/simbad/">SIMBAD Photometry Viewer</a>. These data, when imported into a universal Python program, were applied to the transformed blackbody radiation equation and converted to photon counts.</p>
 	</div>
 </section>
 
@@ -76,11 +78,11 @@ nav-menu: true
 <section id="three">
 	<div class="inner">
 		<header class="major">
-			<h2>Massa libero</h2>
+			<h2>Title</h2>
 		</header>
-		<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+		<p>Text</p>
 		<ul class="actions">
-			<li><a href="generic.html" class="button next">Get Started</a></li>
+			<li><a href="generic.html" class="button next">Button</a></li>
 		</ul>
 	</div>
 </section>
