@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Paper
+title: The Papers
 description: A scientific literary analysis
 image: null
 order: 4
