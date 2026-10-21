@@ -4,6 +4,7 @@ title: Home
 landing-title: Promising Planets- An Astronomy Project
 description: null
 image: null
+weight: 1
 author: null
 show_tile: false
 ---
