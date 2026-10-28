@@ -3,7 +3,7 @@ layout: post
 title: The Papers
 description: A scientific literary analysis
 image: null
-order: 4
+weight: 4
 nav-menu: true
 ---
 

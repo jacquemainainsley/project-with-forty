@@ -3,7 +3,7 @@ layout: page
 title: The Project
 description: Questions, Inspirations, and Goals
 image: null
-order: 2
+weight: 2
 nav-menu: true
 ---
 
